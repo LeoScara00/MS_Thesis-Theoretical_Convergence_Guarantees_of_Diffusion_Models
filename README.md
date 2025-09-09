@@ -1,4 +1,4 @@
-# MSc Thesis
+# Theoretical Convergence Guarantees of Diffusion Models
 
 ## Abstract
 Stochastic processes are widely applied across both theoretical and practical domains, as many dynamic phenomena cannot be described deterministically. In physics, for example, they are used to model the dynamics of particles subject to deterministic forces as well as random perturbations (e.g., collisions). In finance, they provide a mathematical framework for modeling asset price dynamics and, consequently, for pricing financial instruments.
