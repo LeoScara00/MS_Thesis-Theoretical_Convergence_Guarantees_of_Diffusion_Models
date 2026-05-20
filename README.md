@@ -6,36 +6,15 @@ Stochastic processes play a fundamental role in mathematics and in many applied 
 
 At the heart of many modern generative models lies a remarkably simple problem:
 
-> how can we sample efficiently from a complicated high-dimensional probability distribution?
+how can we sample efficiently from a complicated high-dimensional probability distribution?
 
 This thesis explores that question from a mathematical perspective.
 
 The central idea is that probability distributions can be reached dynamically through stochastic processes. Rather than sampling directly from a target distribution $\pi$, one constructs a stochastic evolution whose trajectories converge toward $\pi$ over time. The problem of sampling therefore becomes a problem of understanding the long-time behavior of stochastic dynamics.
 
-The thesis begins with the formal framework of continuous-time Markov processes, introducing transition semigroups, infinitesimal generators, invariant measures, and Fokker–Planck equations. Given a Markov process $(X_t){t\geq0}$, its associated semigroup is defined by
+The thesis begins with the formal framework of continuous-time Markov processes, introducing transition semigroups, infinitesimal generators, invariant measures, and Fokker–Planck equations. Given a Markov process $(X_t)_{t\geq0}$, its associated semigroup is defined by $P_t f(x) = \mathbb{E}[f(X_t)|X_0=x]$. The infinitesimal generator describes the local evolution of the dynamics, $\mathcal L f = \lim_{t\downarrow0}\frac{P_t f-f}{t}. $
 
-$$
-P_t f(x)
-=
-\mathbb{E}[f(X_t)\mid X_0=x],
-$$
-
-while the infinitesimal generator describes the local evolution of the dynamics,
-
-$$
-\mathcal L f
-=
-\lim{t\downarrow0}
-\frac{P_t f-f}{t}.
-$$
-
-From an analytical point of view, the evolution of the probability distribution of the process is governed by the Fokker–Planck equation,
-
-$$
-\partial_t \pi_t
-=
-\mathcal L^* \pi_t.
-$$
+From an analytical point of view, the evolution of the probability distribution of the process is governed by the Fokker–Planck equation, $\partial_t \pi_t \mathcal L^* \pi_t.$
 
 A major theme throughout the thesis is the study of convergence toward equilibrium. In order to quantify how fast a stochastic process approaches its invariant distribution, functional inequalities such as the Poincaré and Log-Sobolev inequalities are introduced. These inequalities provide exponential convergence guarantees for the underlying dynamics and establish deep connections between probability, analysis, and geometry.
 
@@ -43,7 +22,7 @@ A particularly important class of processes is represented by diffusion processe
 
 $$
 dX_t
-=
+
 -\nabla V(X_t),dt
 +
 \sqrt{2},dB_t.
@@ -54,10 +33,10 @@ This dynamics can be interpreted as the combination of a deterministic gradient 
 $$
 \pi(x)
 \propto
-e^{-V(x)},
+e^{-V(x)}.
 $$
 
-meaning that the process naturally evolves toward regions of higher probability density while the stochastic perturbation prevents trajectories from collapsing into local modes.
+The process therefore evolves naturally toward regions of higher probability density, while the stochastic perturbation prevents trajectories from collapsing into local modes.
 
 This connection between stochastic dynamics and probability distributions is one of the conceptual pillars of the thesis. In fact, Langevin diffusion may also be viewed as a gradient flow in the Wasserstein space of probability measures, linking sampling theory with optimal transport and variational analysis.
 
@@ -69,7 +48,7 @@ The key idea is to progressively destroy the structure of the data by adding noi
 
 $$
 dX_t
-=
+
 f(X_t,t),dt
 +
 g(t),dB_t,
@@ -77,7 +56,7 @@ $$
 
 until the distribution becomes close to a simple Gaussian law. One then learns how to reverse this dynamics in order to generate entirely new samples.
 
-A fundamental result shows that the reverse-time process is itself a stochastic differential equation involving the score function,
+A fundamental result shows that the reverse-time process is itself a stochastic differential equation involving the score function
 
 $$
 \nabla \log p_t(x),
@@ -87,7 +66,7 @@ which points toward regions of higher probability density. The reverse dynamics 
 
 $$
 d\overleftarrow X_t
-=
+
 \left[
 -f(\overleftarrow X_t,t)
 +
@@ -114,6 +93,6 @@ $$
 
 The underlying objective remains the same throughout:
 
-> designing stochastic dynamics whose trajectories converge toward a target probability distribution.
+designing stochastic dynamics whose trajectories converge toward a target probability distribution.
 
 The complete MSc thesis is available in this repository.
