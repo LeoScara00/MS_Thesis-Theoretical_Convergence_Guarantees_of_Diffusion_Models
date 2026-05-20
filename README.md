@@ -34,7 +34,11 @@ $$
 \partial_t \pi_t = \mathcal{L}^* \pi_t,
 $$
 
-where $\mathcal{L}^*$ denotes the adjoint operator of $\mathcal{L}$. For reversible processes, the generator is self-adjoint, namely $\mathcal{L}^* = \mathcal{L}$.
+where $\mathcal{L}^*$ denotes the adjoint operator of $\mathcal{L}$. For reversible processes,
+
+$$
+\mathcal{L}^* = \mathcal{L}.
+$$
 
 A major theme throughout the thesis is the study of convergence toward equilibrium. In order to quantify how fast a stochastic process approaches its invariant distribution, functional inequalities such as the Poincaré and Log-Sobolev inequalities are introduced. These inequalities provide exponential convergence guarantees for the underlying dynamics and establish deep connections between probability, analysis, and geometry.
 
