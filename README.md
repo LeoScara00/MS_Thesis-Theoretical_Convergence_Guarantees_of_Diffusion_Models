@@ -18,7 +18,7 @@ $$
 P_t f(x) = \mathbb{E}[f(X_t)\mid X_0=x],
 $$
 
-which describes the future conditional expectation on a proper set of test functions.
+which describes the future conditional expectation on a proper class of test functions.
 
 The infinitesimal generator describes the local evolution of the dynamics,
 
@@ -26,7 +26,7 @@ $$
 \mathcal{L}f = \lim_{t\downarrow0}\frac{P_t f-f}{t},
 $$
 
-and become a central component in the expression for the dynamics of $f(X_t)$ when $(X_t)_{t\geq0}$ is a diffusion process.
+over a proper class of test functions; it becomes a central component in the expression for the dynamics of $f(X_t)$ when $(X_t)_{t\geq0}$ is a diffusion process.
 
 From an analytical point of view, the evolution of the probability distribution of the process is governed by the Fokker–Planck equation
 
@@ -34,7 +34,7 @@ $$
 \partial_t \pi_t = \mathcal{L}^* \pi_t,
 $$
 
-where $\mathcal{L}^*$ is the adjoint operator of $\mathcal{L}$ and for reversible processes we have $\mathcal{L}^*= \mathcal{L}$.
+where $\mathcal{L}^*$ denotes the adjoint operator of $\mathcal{L}$. For reversible processes, the generator is self-adjoint, namely $\mathcal{L}^* = \mathcal{L}$.
 
 A major theme throughout the thesis is the study of convergence toward equilibrium. In order to quantify how fast a stochastic process approaches its invariant distribution, functional inequalities such as the Poincaré and Log-Sobolev inequalities are introduced. These inequalities provide exponential convergence guarantees for the underlying dynamics and establish deep connections between probability, analysis, and geometry.
 
